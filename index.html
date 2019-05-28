@@ -5,10 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript TodoList</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="text/javascript"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/main.js"></script>
 </head>
 <body>
+
+    <header>
+        <div class="holder">
+                <div class="form-group">
+                        <input type="text" class="form-control-inline-lg col-10" id="usr">
+                        <button class="color-white">Add Task</button></span>
+                </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="row row-uncompleted">
+            <h3>Uncompleted Task</h3>
+        </div>
+        <!-- Uncompleted -->
+        <div class="row" id="uncompleted">
+            <ul class="todo">
+              <li class="list-group-item ">First item</li>
+              <li class="list-group-item">Second item</li>
+              <li class="list-group-item">Third item</li>
+              <li class="list-group-item">Fourth item</li>
+            </ul>
+        </div>   
+
+        <div class="row completeds">
+                <h3>Completed Task</h3>
+            </div>
+            <!-- Uncompleted -->
+            <div class="row" id="completed">
+                <ul class="todo">
+                  <li class="list-group-item ">First item</li>
+                  <li class="list-group-item">Second item</li>
+                  <li class="list-group-item">Third item</li>
+                  <li class="list-group-item">Fourth item</li>
+                </ul>
+            </div>
+    </div>
     
     
 </body>
