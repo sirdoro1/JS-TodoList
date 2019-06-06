@@ -11,19 +11,20 @@
         // Delete Button
         var deletebtn = document.createElement("BUTTON");
         deletebtn.innerHTML = delHTML;
-        deletebtn.classList.add('btn','remove');
+        deletebtn.classList.add('remove');
         deletebtn.addEventListener('click',removetask);
 
 
         // Done Button
         var donebtn = document.createElement("BUTTON"); 
         donebtn.innerHTML = doneHTML;
-        donebtn.classList.add('btn','complete');
+        donebtn.classList.add('complete');
+        donebtn.addEventListener('click',completedtask)
 
         
         // Buttons Span
         var btnspan = document.createElement("SPAN");
-        btnspan.classList.add('listbutton','buttons');
+        btnspan.classList.add('buttons');
         btnspan.appendChild(deletebtn);
         btnspan.appendChild(donebtn);
 
@@ -43,6 +44,17 @@
         parent.removeChild(child);
     }
 
+    function completedtask(e){
+        var child = this.parentNode.parentNode;
+        var parent = child.parentNode;
+        var id = parent.id;
+
+        var target = (id == 'todo')? document.getElementById('completed'):document.getElementById('todo');
+
+        parent.removeChild(child);
+        target.insertBefore(child,target.childNodes[0]);
+
+    }
 
     
     
